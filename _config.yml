@@ -1,7 +1,7 @@
-title: "*{flow :cloud}"
+title: "* { float:cloud; }"
 author: "Leyteris"
-description: "Really cool blog about ... something"
-#subheading: "Really cool blog about ... something"
+description: "努力做一个没有但有趣的人"
+# subheading: "Really cool blog about ... something"
 more: "read more"
 url: ""
 #baseurl: "/contrast" # comment out if in root directory
@@ -11,12 +11,12 @@ comments:
 #    isso: "comments.mysite.org"
 
 style:
-#    body: "whitesmoke"
+   # body: "whitesmoke"
     padding: 33%
     anchor: "#46f"
     serif-heading: true
     nav: "#181818"
-#    headline: "#06f"
+   # headline: "#06f"
     description: "white"
     article:
         odd: "#ffffff"

@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     
-    <meta name="description" content="Really cool blog about ... something">
-    <title>*{flow :cloud}</title>
+    <meta name="description" content="努力做一个没有但有趣的人">
+    <title>* { float:cloud; }</title>
     <link rel="canonical" href="/index.html">
     <link href="/main.css" rel="stylesheet" type="text/css">
     <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,200italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
-    <link rel="alternate" type="application/rss+xml" title="*{flow :cloud} &raquo; Feed" href="/feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="* { float:cloud; } &raquo; Feed" href="/feed.xml">
     
     
   </head>
   <body>
     <header>
-      <h1><a href="/">*{flow :cloud}</a></h1>
+      <h1><a href="/">* { float:cloud; }</a></h1>
       <nav>
         <ul>
           <li><a href="/">Home</a></li><li><a href="/archive.html">Archive</a></li>
@@ -30,7 +30,7 @@
     
     <article>
       <header>
-        <h2><a href="/example/2014/09/11/jekyll-install.html">Example</a></h2>
+        <h2><a href="/example/2014/09/11/jekyll-install.html">Jekyll部署</a></h2>
         <p><time datetime="2014-09-11T06:37:00+08:00">Sep 11, 2014</time> • example</p>
       </header>
       <div>
@@ -52,34 +52,41 @@
 <pre><code>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 </code></pre>
 
-<h2 id="install-ruby">install ruby</h2>
-<p>https://www.ruby-lang.org/en/documentation/installation/#homebrew</p>
+<h2 id="install-ruby">Install Ruby</h2>
+<blockquote>
+  <p>https://www.ruby-lang.org/en/documentation/installation/#homebrew</p>
+</blockquote>
 
 <pre><code>$ brew install ruby
 </code></pre>
 
-<h2 id="sources-change">sources change</h2>
+<h2 id="sources-change">Sources Change</h2>
 <blockquote>
   <p>http://ruby.taobao.org/</p>
 </blockquote>
 
 <pre><code>$ gem sources --remove https://rubygems.org/
 $ gem sources -a https://ruby.taobao.org/
-$ gem sources -l *** CURRENT SOURCES ***
+$ gem sources -l
+*** CURRENT SOURCES ***
+https://ruby.taobao.org
 </code></pre>
-
-<p>https://ruby.taobao.org</p>
 
 <p><code>请确保只有 ruby.taobao.org</code></p>
 
 <h2 id="install-rubygems">Install RubyGems</h2>
-<p>https://rubygems.org/pages/download</p>
+<blockquote>
+  <p>https://rubygems.org/pages/download</p>
+</blockquote>
 
-<p>$ gem update –system</p>
+<pre><code>$ gem update --system
+</code></pre>
 
-<h2 id="git">配置多个git账号</h2>
+<h2 id="config-multi-git-accounts">Config Multi Git Accounts</h2>
 
-<p>https://help.github.com/articles/generating-ssh-keys/</p>
+<blockquote>
+  <p>https://help.github.com/articles/generating-ssh-keys/</p>
+</blockquote>
 
 <pre><code>$ cat ~/.gitconfig  
 

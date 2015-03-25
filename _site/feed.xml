@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>*{flow :cloud}</title>
-    <description>Really cool blog about ... something</description>
+    <title>* { float:cloud; }</title>
+    <description>努力做一个没有但有趣的人</description>
     <link></link>
     <atom:link href="feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 25 Mar 2015 22:09:56 +0800</pubDate>
-    <lastBuildDate>Wed, 25 Mar 2015 22:09:56 +0800</lastBuildDate>
+    <pubDate>Wed, 25 Mar 2015 22:26:53 +0800</pubDate>
+    <lastBuildDate>Wed, 25 Mar 2015 22:26:53 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>Example</title>
+        <title>Jekyll部署</title>
         <description>&lt;h2 id=&quot;about-jekyll&quot;&gt;About Jekyll&lt;/h2&gt;
 
 &lt;blockquote&gt;
@@ -29,34 +29,41 @@
 &lt;pre&gt;&lt;code&gt;ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&quot;install-ruby&quot;&gt;install ruby&lt;/h2&gt;
-&lt;p&gt;https://www.ruby-lang.org/en/documentation/installation/#homebrew&lt;/p&gt;
+&lt;h2 id=&quot;install-ruby&quot;&gt;Install Ruby&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;https://www.ruby-lang.org/en/documentation/installation/#homebrew&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;pre&gt;&lt;code&gt;$ brew install ruby
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&quot;sources-change&quot;&gt;sources change&lt;/h2&gt;
+&lt;h2 id=&quot;sources-change&quot;&gt;Sources Change&lt;/h2&gt;
 &lt;blockquote&gt;
   &lt;p&gt;http://ruby.taobao.org/&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;pre&gt;&lt;code&gt;$ gem sources --remove https://rubygems.org/
 $ gem sources -a https://ruby.taobao.org/
-$ gem sources -l *** CURRENT SOURCES ***
+$ gem sources -l
+*** CURRENT SOURCES ***
+https://ruby.taobao.org
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;https://ruby.taobao.org&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;请确保只有 ruby.taobao.org&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;install-rubygems&quot;&gt;Install RubyGems&lt;/h2&gt;
-&lt;p&gt;https://rubygems.org/pages/download&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;https://rubygems.org/pages/download&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;$ gem update –system&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ gem update --system
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&quot;git&quot;&gt;配置多个git账号&lt;/h2&gt;
+&lt;h2 id=&quot;config-multi-git-accounts&quot;&gt;Config Multi Git Accounts&lt;/h2&gt;
 
-&lt;p&gt;https://help.github.com/articles/generating-ssh-keys/&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;https://help.github.com/articles/generating-ssh-keys/&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;pre&gt;&lt;code&gt;$ cat ~/.gitconfig  
 
@@ -94,8 +101,10 @@ Host github.com
   &lt;p&gt;http://riny.net/2014/git-ssh-key/&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;bundle-install&quot;&gt;bundle install&lt;/h2&gt;
-&lt;p&gt;http://www.pchou.info/web-build/2014/07/04/build-github-blog-page-08.html&lt;/p&gt;
+&lt;h2 id=&quot;bundle-install&quot;&gt;Bundle Install&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;http://www.pchou.info/web-build/2014/07/04/build-github-blog-page-08.html&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;pre&gt;&lt;code&gt;$ gem install bundle
 $ gem install jekyll
@@ -103,8 +112,7 @@ $ gem install jekyll
 
 &lt;blockquote&gt;
   &lt;p&gt;注意：
-根目录的Gemfile文件加入
-source ‘http://ruby.taobao.org/’&lt;/p&gt;
+根目录的Gemfile文件加入 &lt;code&gt;source &#39;http://ruby.taobao.org/&#39;&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;pre&gt;&lt;code&gt;$ bundle install
@@ -124,10 +132,12 @@ Make sure that &lt;code&gt;gem install nokogiri -v &#39;1.6.6.2&#39;&lt;/code&gt
 
 &lt;p&gt;之后执行&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ bundle exec jekyll serve
+&lt;pre&gt;&lt;code&gt;$ bundle exec jekyll serve 或
+
+$ jekyll serve
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;最后在浏览器&lt;/p&gt;
+&lt;p&gt;最后在浏览器键入&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;http://127.0.0.1:4000/&lt;/p&gt;

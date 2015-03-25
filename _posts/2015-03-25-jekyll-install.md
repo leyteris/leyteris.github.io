@@ -1,5 +1,5 @@
 ---
-title:  "Example"
+title:  "Jekyll部署"
 date:   2014-09-10 22:37:00
 categories: example
 ---
@@ -15,31 +15,30 @@ categories: example
 
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-##install ruby
-https://www.ruby-lang.org/en/documentation/installation/#homebrew
+##Install Ruby
+>https://www.ruby-lang.org/en/documentation/installation/#homebrew
 
 	$ brew install ruby
 
-##sources change
+##Sources Change
 >http://ruby.taobao.org/
 
 	$ gem sources --remove https://rubygems.org/
 	$ gem sources -a https://ruby.taobao.org/
 	$ gem sources -l
-*** CURRENT SOURCES ***
-
-https://ruby.taobao.org
+	*** CURRENT SOURCES ***
+	https://ruby.taobao.org
 
 `请确保只有 ruby.taobao.org`
 
 ##Install RubyGems
-https://rubygems.org/pages/download
+>https://rubygems.org/pages/download
 
-$ gem update --system
+	$ gem update --system
 
-##配置多个git账号
+##Config Multi Git Accounts
 
-https://help.github.com/articles/generating-ssh-keys/
+>https://help.github.com/articles/generating-ssh-keys/
 
 	$ cat ~/.gitconfig  
 
@@ -73,15 +72,14 @@ https://help.github.com/articles/generating-ssh-keys/
 >http://riny.net/2014/git-ssh-key/
 
 
-##bundle install
-http://www.pchou.info/web-build/2014/07/04/build-github-blog-page-08.html
+##Bundle Install
+>http://www.pchou.info/web-build/2014/07/04/build-github-blog-page-08.html
 
 	$ gem install bundle
 	$ gem install jekyll
 
 >注意：
-根目录的Gemfile文件加入
-source 'http://ruby.taobao.org/'
+根目录的Gemfile文件加入 `source 'http://ruby.taobao.org/'`
 
 	$ bundle install
 
@@ -97,8 +95,11 @@ Make sure that `gem install nokogiri -v '1.6.6.2'` succeeds before bundling.
 之后执行
 
 	$ bundle exec jekyll serve
+或
 	
-最后在浏览器
+	$ jekyll serve
+	
+最后在浏览器键入
 
 >http://127.0.0.1:4000/
 
