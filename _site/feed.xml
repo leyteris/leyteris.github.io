@@ -5,8 +5,8 @@
     <description>努力做一个没有但有趣的人</description>
     <link></link>
     <atom:link href="feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 25 Mar 2015 22:26:53 +0800</pubDate>
-    <lastBuildDate>Wed, 25 Mar 2015 22:26:53 +0800</lastBuildDate>
+    <pubDate>Wed, 25 Mar 2015 22:32:05 +0800</pubDate>
+    <lastBuildDate>Wed, 25 Mar 2015 22:32:05 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -145,11 +145,11 @@ $ jekyll serve
 
 </description>
         <pubDate>Thu, 11 Sep 2014 06:37:00 +0800</pubDate>
-        <link>/example/2014/09/11/jekyll-install.html</link>
-        <guid isPermaLink="true">/example/2014/09/11/jekyll-install.html</guid>
+        <link>/fd/2014/09/11/jekyll-install.html</link>
+        <guid isPermaLink="true">/fd/2014/09/11/jekyll-install.html</guid>
         
         
-        <category>example</category>
+        <category>fd</category>
         
       </item>
     

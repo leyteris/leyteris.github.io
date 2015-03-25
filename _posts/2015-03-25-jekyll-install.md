@@ -1,7 +1,7 @@
 ---
 title:  "Jekyll部署"
 date:   2014-09-10 22:37:00
-categories: example
+categories: FD
 ---
 
 ##About Jekyll
