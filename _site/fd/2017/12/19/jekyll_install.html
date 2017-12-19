@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     
-    <meta name="description" content="努力做一个没有但有趣的人">
-    <title> Jekyll部署 › * { float:cloud; }</title>
-    <link rel="canonical" href="http://localhost:4000/fd/2014/09/11/jekyll-install.html">
+    <meta name="description" content="独白进行中。。。请勿打扰">
+    <title> Jekyll Install › 寸又的独白</title>
+    <link rel="canonical" href="/fd/2017/12/19/jekyll_install.html">
     <link href="/main.css" rel="stylesheet" type="text/css">
     <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,200italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
-    <link rel="alternate" type="application/rss+xml" title="* { float:cloud; } &raquo; Feed" href="/feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="寸又的独白 &raquo; Feed" href="/feed.xml">
     
     
   </head>
   <body>
     <header>
-      <h1><a href="/">* { float:cloud; }</a></h1>
+      <h1><a href="/">寸又的独白</a></h1>
       <nav>
         <ul>
           <li><a href="/">Home</a></li><li><a href="/archive.html">Archive</a></li>
@@ -29,8 +29,8 @@
     
     <article>
       <header>
-        <h2><a href="/fd/2014/09/11/jekyll-install.html">Jekyll部署</a></h2>
-        <p><time datetime="2014-09-11T06:37:00+08:00">Sep 11, 2014</time> • FD</p>
+        <h2><a href="/fd/2017/12/19/jekyll_install.html">Jekyll Install</a></h2>
+        <p><time datetime="2017-12-19T23:47:00+08:00">Dec 19, 2017</time> • fd</p>
       </header>
       <div>
 <h2 id="about-jekyll">About Jekyll</h2>
@@ -46,9 +46,13 @@
 <h2 id="install-homebrew">Install Homebrew</h2>
 <blockquote>
   <p>http://brew.sh/</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-</code></pre></div>  </div>
-  <h2 id="install-ruby">Install Ruby</h2>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+</code></pre></div></div>
+
+<h2 id="install-ruby">Install Ruby</h2>
+<blockquote>
   <p>https://www.ruby-lang.org/en/documentation/installation/#homebrew</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ brew install ruby
 </code></pre></div>  </div>
@@ -138,6 +142,12 @@ Make sure that <code class="highlighter-rouge">gem install nokogiri -v '1.6.6.2'
   <p>http://127.0.0.1:4000/</p>
 </blockquote>
 
+<h2 id="坑点">坑点</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2017-12-19T23:47:00+08:00
+</code></pre></div></div>
+<p>这个如果不加时区可能导致无法生成，
+最好采用这种完全的写法</p>
 
       </div>
       
@@ -145,7 +155,7 @@ Make sure that <code class="highlighter-rouge">gem install nokogiri -v '1.6.6.2'
     </article>
 
     <footer>
-      <span><a href="http://localhost:4000">Leyteris</a></span>
+      <span><a href="">Leyteris</a></span>
       <span><a href="https://github.com/leyteris/"><i class="fa fa-github-square"></i></a></span>
       <span>&copy; 2017</span>
     </footer>

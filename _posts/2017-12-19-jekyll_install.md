@@ -1,7 +1,7 @@
 ---
-title:  "Jekyll部署"
-date:   2014-09-10 22:37:00
-categories: FD
+title:  "Jekyll Install"
+date:   2017-12-19T23:47:00+08:00
+categories: fd
 ---
 
 ## About Jekyll
@@ -12,9 +12,11 @@ categories: FD
 
 ## Install Homebrew
 >http://brew.sh/
+
 ```
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
+
 ## Install Ruby
 >https://www.ruby-lang.org/en/documentation/installation/#homebrew
 ```
@@ -111,3 +113,10 @@ $ jekyll build
 >http://127.0.0.1:4000/
 
 
+## 坑点
+
+```
+2017-12-19T23:47:00+08:00
+```
+这个如果不加时区可能导致无法生成，
+最好采用这种完全的写法

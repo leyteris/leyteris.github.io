@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     
-    <meta name="description" content="努力做一个没有但有趣的人">
-    <title>* { float:cloud; }</title>
-    <link rel="canonical" href="http://localhost:4000/">
+    <meta name="description" content="独白进行中。。。请勿打扰">
+    <title>寸又的独白</title>
+    <link rel="canonical" href="/">
     <link href="/main.css" rel="stylesheet" type="text/css">
     <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,200italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
-    <link rel="alternate" type="application/rss+xml" title="* { float:cloud; } &raquo; Feed" href="/feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="寸又的独白 &raquo; Feed" href="/feed.xml">
     
     
   </head>
   <body>
     <header>
-      <h1><a href="/">* { float:cloud; }</a></h1>
+      <h1><a href="/">寸又的独白</a></h1>
       <nav>
         <ul>
           <li><a href="/">Home</a></li><li><a href="/archive.html">Archive</a></li>
@@ -30,8 +30,8 @@
     
     <article>
       <header>
-        <h2><a href="/fd/2014/09/11/jekyll-install.html">Jekyll部署</a></h2>
-        <p><time datetime="2014-09-11T06:37:00+08:00">Sep 11, 2014</time> • FD</p>
+        <h2><a href="/fd/2017/12/19/jekyll_install.html">Jekyll Install</a></h2>
+        <p><time datetime="2017-12-19T23:47:00+08:00">Dec 19, 2017</time> • fd</p>
       </header>
       <div>
 <h2 id="about-jekyll">About Jekyll</h2>
@@ -47,9 +47,13 @@
 <h2 id="install-homebrew">Install Homebrew</h2>
 <blockquote>
   <p>http://brew.sh/</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-</code></pre></div>  </div>
-  <h2 id="install-ruby">Install Ruby</h2>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+</code></pre></div></div>
+
+<h2 id="install-ruby">Install Ruby</h2>
+<blockquote>
   <p>https://www.ruby-lang.org/en/documentation/installation/#homebrew</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ brew install ruby
 </code></pre></div>  </div>
@@ -107,73 +111,13 @@ Host github.com
 
       </div>
       <footer>
-        <p><a href="/fd/2014/09/11/jekyll-install.html">read more &raquo;</a></p>
-      </footer>
-    </article>
-    
-    <article>
-      <header>
-        <h2><a href="/example/2014/09/11/example.html">Example</a></h2>
-        <p><time datetime="2014-09-11T06:37:00+08:00">Sep 11, 2014</time> • example</p>
-      </header>
-      <div>
-<p><strong>Basic</strong></p>
-
-<p>Neque porro <em>quisquam</em> est, qui <strong>dolorem</strong> ipsum, quia <strong><em>dolor</em></strong> sit, amet, <a href="http://cjdns.info/">consectetur</a>, adipisci velit.</p>
-
-<ul>
-  <li>lorem</li>
-  <li>ipsum</li>
-</ul>
-
-<ol>
-  <li>dolor</li>
-  <li>sit</li>
-</ol>
-
-<table>
-  <thead>
-    <tr>
-      <th>First Header</th>
-      <th>Second Header</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Table Cell</td>
-      <td>Table Cell</td>
-    </tr>
-  </tbody>
-</table>
-
-<p><strong>Blockquote</strong></p>
-
-<blockquote>
-  <p>They who can give up essential liberty to obtain a little temporary safety, deserve neither liberty nor safety.</p>
-
-  <p><em>Benjamin Franklin</em></p>
-</blockquote>
-
-<p><strong>Code</strong></p>
-
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">static</span> <span class="kt">void</span> <span class="nf">asyncEnabled</span><span class="p">(</span><span class="n">Dict</span><span class="o">*</span> <span class="n">args</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">vAdmin</span><span class="p">,</span> <span class="n">String</span><span class="o">*</span> <span class="n">txid</span><span class="p">,</span> <span class="k">struct</span> <span class="n">Allocator</span><span class="o">*</span> <span class="n">requestAlloc</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">struct</span> <span class="n">Admin</span><span class="o">*</span> <span class="n">admin</span> <span class="o">=</span> <span class="n">Identity_check</span><span class="p">((</span><span class="k">struct</span> <span class="n">Admin</span><span class="o">*</span><span class="p">)</span> <span class="n">vAdmin</span><span class="p">);</span>
-    <span class="kt">int64_t</span> <span class="n">enabled</span> <span class="o">=</span> <span class="n">admin</span><span class="o">-&gt;</span><span class="n">asyncEnabled</span><span class="p">;</span>
-    <span class="n">Dict</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Dict_CONST</span><span class="p">(</span><span class="n">String_CONST</span><span class="p">(</span><span class="s">"asyncEnabled"</span><span class="p">),</span> <span class="n">Int_OBJ</span><span class="p">(</span><span class="n">enabled</span><span class="p">),</span> <span class="nb">NULL</span><span class="p">);</span>
-    <span class="n">Admin_sendMessage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">d</span><span class="p">,</span> <span class="n">txid</span><span class="p">,</span> <span class="n">admin</span><span class="p">);</span>
-<span class="p">}</span></code></pre></figure>
-
-
-      </div>
-      <footer>
-        <p><a href="/example/2014/09/11/example.html">read more &raquo;</a></p>
+        <p><a href="/fd/2017/12/19/jekyll_install.html">more &raquo;</a></p>
       </footer>
     </article>
     
 
     <footer>
-      <span><a href="http://localhost:4000">Leyteris</a></span>
+      <span><a href="">Leyteris</a></span>
       <span><a href="https://github.com/leyteris/"><i class="fa fa-github-square"></i></a></span>
       <span>&copy; 2017</span>
     </footer>
