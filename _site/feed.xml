@@ -3,11 +3,11 @@
   <channel>
     <title>* { float:cloud; }</title>
     <description>努力做一个没有但有趣的人</description>
-    <link></link>
-    <atom:link href="feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 25 Mar 2015 22:32:05 +0800</pubDate>
-    <lastBuildDate>Wed, 25 Mar 2015 22:32:05 +0800</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <link>http://localhost:4000</link>
+    <atom:link href="http://localhost:4000feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 19 Dec 2017 23:13:16 +0800</pubDate>
+    <lastBuildDate>Tue, 19 Dec 2017 23:13:16 +0800</lastBuildDate>
+    <generator>Jekyll v3.6.2</generator>
     
       <item>
         <title>Jekyll部署</title>
@@ -24,118 +24,91 @@
 &lt;h2 id=&quot;install-homebrew&quot;&gt;Install Homebrew&lt;/h2&gt;
 &lt;blockquote&gt;
   &lt;p&gt;http://brew.sh/&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;pre&gt;&lt;code&gt;ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;install-ruby&quot;&gt;Install Ruby&lt;/h2&gt;
-&lt;blockquote&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+  &lt;h2 id=&quot;install-ruby&quot;&gt;Install Ruby&lt;/h2&gt;
   &lt;p&gt;https://www.ruby-lang.org/en/documentation/installation/#homebrew&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;pre&gt;&lt;code&gt;$ brew install ruby
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;sources-change&quot;&gt;Sources Change&lt;/h2&gt;
-&lt;blockquote&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ brew install ruby
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+  &lt;h2 id=&quot;sources-change&quot;&gt;Sources Change&lt;/h2&gt;
   &lt;p&gt;http://ruby.taobao.org/&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;pre&gt;&lt;code&gt;$ gem sources --remove https://rubygems.org/
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem sources --remove https://rubygems.org/
 $ gem sources -a https://ruby.taobao.org/
 $ gem sources -l
 *** CURRENT SOURCES ***
 https://ruby.taobao.org
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;&lt;code&gt;请确保只有 ruby.taobao.org&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;请确保只有 ruby.taobao.org&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;install-rubygems&quot;&gt;Install RubyGems&lt;/h2&gt;
 &lt;blockquote&gt;
   &lt;p&gt;https://rubygems.org/pages/download&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem update --system
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+  &lt;h2 id=&quot;config-multi-git-accounts&quot;&gt;Config Multi Git Accounts&lt;/h2&gt;
 &lt;/blockquote&gt;
-
-&lt;pre&gt;&lt;code&gt;$ gem update --system
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;config-multi-git-accounts&quot;&gt;Config Multi Git Accounts&lt;/h2&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;https://help.github.com/articles/generating-ssh-keys/&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cat ~/.gitconfig  
+$ ls -al ~/.ssh
+$ ssh-keygen -t rsa -C &quot;youremail@gmail.com&quot;
+$ pbcopy &amp;lt; ~/.ssh/id_rsa.pub
+$ vi config
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
 &lt;/blockquote&gt;
 
-&lt;pre&gt;&lt;code&gt;$ cat ~/.gitconfig  
-
-$ ls -al ~/.ssh
-
-$ ssh-keygen -t rsa -C &quot;youremail@gmail.com&quot;
-
-$ pbcopy &amp;lt; ~/.ssh/id_rsa.pub
-
-$ vi config
-
-git config user.name &quot;用户名&quot;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config user.name &quot;用户名&quot;
 git config user.email &quot;邮箱&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;之后加入下面两段代码&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Host gitlab.com
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Host gitlab.com
 	HostName gitlab.alibaba-inc.com
 	PreferredAuthentications publickey
 	IdentityFile ~/.ssh/id_rsa 
-
+	
 Host github.com
 	HostName github.com
 	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/id_rsa_github &amp;lt;/code&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
+	IdentityFile ~/.ssh/id_rsa_github
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;之后执行尝试连接&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ ssh -T git@github.com
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ssh -T git@github.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;blockquote&gt;
   &lt;p&gt;http://riny.net/2014/git-ssh-key/&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;bundle-install&quot;&gt;Bundle Install&lt;/h2&gt;
+&lt;p&gt;##Bundle Install&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;http://www.pchou.info/web-build/2014/07/04/build-github-blog-page-08.html&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;pre&gt;&lt;code&gt;$ gem install bundle
-$ gem install jekyll
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install bundle -n /usr/local/bin
+$ gem install jekyll -n /usr/local/bin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
   &lt;p&gt;注意：
-根目录的Gemfile文件加入 &lt;code&gt;source &#39;http://ruby.taobao.org/&#39;&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;pre&gt;&lt;code&gt;$ bundle install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
+根目录的Gemfile文件加入 &lt;code class=&quot;highlighter-rouge&quot;&gt;source 'http://ruby.taobao.org/'&lt;/code&gt;&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
   &lt;p&gt;出现：
 An error occurred while installing nokogiri (1.6.6.2), and Bundler cannot continue.
-Make sure that &lt;code&gt;gem install nokogiri -v &#39;1.6.6.2&#39;&lt;/code&gt; succeeds before bundling.
+Make sure that &lt;code class=&quot;highlighter-rouge&quot;&gt;gem install nokogiri -v '1.6.6.2'&lt;/code&gt; succeeds before bundling.
 则需要执行&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ xcode-select --install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+  &lt;p&gt;===&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;pre&gt;&lt;code&gt;$ xcode-select --install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;===&lt;/p&gt;
-
 &lt;p&gt;之后执行&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ bundle exec jekyll serve 或
-
-$ jekyll serve
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle exec jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;或&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;或&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;最后在浏览器键入&lt;/p&gt;
 
@@ -145,11 +118,11 @@ $ jekyll serve
 
 </description>
         <pubDate>Thu, 11 Sep 2014 06:37:00 +0800</pubDate>
-        <link>/fd/2014/09/11/jekyll-install.html</link>
-        <guid isPermaLink="true">/fd/2014/09/11/jekyll-install.html</guid>
+        <link>http://localhost:4000/fd/2014/09/11/jekyll-install.html</link>
+        <guid isPermaLink="true">http://localhost:4000/fd/2014/09/11/jekyll-install.html</guid>
         
         
-        <category>fd</category>
+        <category>FD</category>
         
       </item>
     
@@ -194,18 +167,18 @@ $ jekyll serve
 
 &lt;p&gt;&lt;strong&gt;Code&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;asyncEnabled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dict&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vAdmin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Allocator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requestAlloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;asyncEnabled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dict&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vAdmin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Allocator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requestAlloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Admin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;admin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Identity_check&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Admin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vAdmin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;kt&quot;&gt;int64_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enabled&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;admin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;asyncEnabled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Dict&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Dict_CONST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String_CONST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;asyncEnabled&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Int_OBJ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;enabled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Dict&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Dict_CONST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String_CONST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;asyncEnabled&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Int_OBJ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;enabled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;Admin_sendMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;admin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
         <pubDate>Thu, 11 Sep 2014 06:37:00 +0800</pubDate>
-        <link>/example/2014/09/11/example.html</link>
-        <guid isPermaLink="true">/example/2014/09/11/example.html</guid>
+        <link>http://localhost:4000/example/2014/09/11/example.html</link>
+        <guid isPermaLink="true">http://localhost:4000/example/2014/09/11/example.html</guid>
         
         
         <category>example</category>
