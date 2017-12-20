@@ -40,13 +40,121 @@
     <description>独白进行中。。。请勿打扰</description>
     <link></link>
     <atom:link href="feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 19 Dec 2017 23:49:15 +0800</pubDate>
-    <lastBuildDate>Tue, 19 Dec 2017 23:49:15 +0800</lastBuildDate>
+    <pubDate>Wed, 20 Dec 2017 10:59:49 +0800</pubDate>
+    <lastBuildDate>Wed, 20 Dec 2017 10:59:49 +0800</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
-        <title>Jekyll Install</title>
-        <description>&lt;h2 id=&quot;about-jekyll&quot;&gt;About Jekyll&lt;/h2&gt;
+        <title>在bash和zsh配置环境变量path的几种方法</title>
+        <description>&lt;h2 id=&quot;参考文献&quot;&gt;参考文献&lt;/h2&gt;
+
+&lt;p&gt;老习惯，列出本文&lt;strong&gt;参考&lt;/strong&gt;或&lt;strong&gt;引用&lt;/strong&gt;或&lt;strong&gt;转载&lt;/strong&gt;的文档和博客，致以崇高的敬意，感兴趣的可以去看看
+1.&lt;a href=&quot;http://postgresapp.com/&quot;&gt;http://postgresapp.com/&lt;/a&gt;
+2.&lt;a href=&quot;http://postgresapp.com/documentation/cli-tools.html&quot;&gt;http://postgresapp.com/documentation/cli-tools.html&lt;/a&gt;
+3.&lt;a href=&quot;http://www.yiibai.com/postgresql/2013080439.html&quot;&gt;http://www.yiibai.com/postgresql/2013080439.html&lt;/a&gt;
+4.终极 Shell——ZSH： &lt;a href=&quot;https://zhuanlan.zhihu.com/p/19556676&quot;&gt;https://zhuanlan.zhihu.com/p/19556676&lt;/a&gt;
+5.Zsh安装配置指南 &lt;a href=&quot;http://www.linuxidc.com/Linux/2013-09/90377.htm&quot;&gt;http://www.linuxidc.com/Linux/2013-09/90377.htm&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;1简介&quot;&gt;1.简介&lt;/h2&gt;
+
+&lt;p&gt;mac 一般使用bash作为默认shell
+在 Linux 里执行这个命令和 Mac 略有不同，你会发现 Mac 多了一个 zsh，也就是说 OS X 系统预装了个 zsh，这是个神马 Shell 呢？
+目前常用的 Linux 系统和 OS X 系统的默认 Shell 都是 bash，但是真正强大的 Shell 是深藏不露的 zsh， 这货绝对是马车中的跑车，跑车中的飞行车，史称『终极 Shell』，但是由于配置过于复杂，所以初期无人问津，很多人跑过来看看 zsh 的配置指南，什么都不说转身就走了。直到有一天，国外有个穷极无聊的程序员开发出了一个能够让你快速上手的zsh项目，叫做「oh my zsh」，Github 网址是：&lt;a href=&quot;https://link.zhihu.com/?target=https://github.com/robbyrussell/oh-my-zsh&quot;&gt;https://github.com/robbyrussell/oh-my-zsh**&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;2正文&quot;&gt;2.正文&lt;/h2&gt;
+
+&lt;h3 id=&quot;21-bash中设置环境变量path的几种方法&quot;&gt;2.1 bash中设置环境变量path的几种方法&lt;/h3&gt;
+
+&lt;p&gt;Mac系统的环境变量，加载顺序为：&lt;/p&gt;
+
+&lt;p&gt;/etc/profile
+/etc/paths
+~/.bash_profile
+~/.bash_login
+~/.profile
+~/.bashrc&lt;/p&gt;
+
+&lt;p&gt;当然/etc/profile和/etc/paths是系统级别的，系统启动就会加载，后面几个是当前用户级的环境变量。后面3个按照从前往后的顺序读取，如果~/.bash_profile文件存在，则后面的几个文件就会被忽略不读了，如果~/.bash_profile文件不存在，才会以此类推读取后面的文件。~/.bashrc没有上述规则，它是bash shell打开的时候载入的。&lt;/p&gt;
+
+&lt;p&gt;如果没特殊说明,设置PATH的语法都为：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#中间用冒号隔开
+export PATH=$PATH:&amp;lt;PATH 1&amp;gt;:&amp;lt;PATH 2&amp;gt;:&amp;lt;PATH 3&amp;gt;:------:&amp;lt;PATH N&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;一全局设置&quot;&gt;（一）全局设置&lt;/h3&gt;
+
+&lt;p&gt;下面的几个文件设置是全局的，修改时需要root权限&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;/etc/paths （全局建议修改这个文件 ）&lt;/p&gt;
+
+    &lt;p&gt;编辑 paths，将环境变量添加到 paths文件中 ，一行一个路径
+Hint：输入环境变量时，不用一个一个地输入，只要拖动文件夹到 Terminal 里就可以了。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;/etc/profile （建议不修改这个文件 ）&lt;/p&gt;
+
+    &lt;p&gt;全局（公有）配置，不管是哪个用户，登录时都会读取该文件。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;etc/bashrc （一般在这个文件中添加系统级环境变量）&lt;/p&gt;
+
+    &lt;p&gt;全局（公有）配置，bash shell执行时，不管是何种方式，都会读取此文件。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;​&lt;/p&gt;
+
+    &lt;p&gt;1.创建一个文件：
+sudo touch /etc/paths.d/mysql
+2.用 vim 打开这个文件（如果是以 open -t 的方式打开，则不允许编辑）：
+sudo vim /etc/paths.d/mysql
+3.编辑该文件，键入路径并保存（关闭该 Terminal 窗口并重新打开一个，就能使用 mysql 命令了）
+/usr/local/mysql/bin
+据说，这样可以自己生成新的文件，不用把变量全都放到 paths 一个文件里，方便管理。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;（二）单个用户设置&lt;/p&gt;
+
+&lt;p&gt;1）~/.bash_profile （任意一个文件中添加用户级环境变量）
+（注：Linux 里面是 .bashrc 而 Mac 是 .bash_profile）
+若bash shell是以login方式执行时，才会读取此文件。该文件仅仅执行一次!默认情况下,他设置一些环境变量
+设置命令别名alias ll=’ls -la’
+设置环境变量：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;2）~/.bashrc 同上&lt;/p&gt;
+
+&lt;p&gt;如果想立刻生效，则可执行下面的语句：
+$ source 相应的文件
+一般环境变量更改后，重启后生效。&lt;/p&gt;
+
+&lt;h3 id=&quot;22-解决-mac-下配置环境变量在-zsh-中无效的问题&quot;&gt;2.2 解决 Mac 下配置环境变量在 ZSH 中无效的问题&lt;/h3&gt;
+
+&lt;p&gt;在配置 gradle 的时候, 发现在 /etc/profiles 中设置了环境变量后, 还是不能在 zsh 中使用. 但在 Terminal 中可以正常使用. 后来发现是因为没有在 .zshrc 中配置.&lt;/p&gt;
+
+&lt;p&gt;在终端中输入: cat ~/.zshrc 以此来查看 .zshrc 文件, 找到里面的 “ # User configuration “ 部分. 可以看到当前 zsh 支持的所有本地已配置环境变量.&lt;/p&gt;
+
+&lt;p&gt;在 export PATH=”XXXX” 里面追加一条想要配置的环境变量路径.&lt;/p&gt;
+
+&lt;p&gt;重启 item2 即可。&lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Dec 2017 10:47:00 +0800</pubDate>
+        <link>/fd/2017/12/20/%E5%9C%A8bash%E5%92%8Czsh%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8Fpath%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95.html</link>
+        <guid isPermaLink="true">/fd/2017/12/20/%E5%9C%A8bash%E5%92%8Czsh%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8Fpath%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95.html</guid>
+        
+        
+        <category>FD</category>
+        
+      </item>
+    
+      <item>
+        <title>Jekyll配置和安装</title>
+        <description>&lt;h1 id=&quot;about-jekyll&quot;&gt;About Jekyll&lt;/h1&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;https://github.com/jekyll/jekyll/&lt;/p&gt;
@@ -56,7 +164,8 @@
   &lt;p&gt;http://jekyllrb.com/docs/installation/&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;install-homebrew&quot;&gt;Install Homebrew&lt;/h2&gt;
+&lt;h1 id=&quot;install-homebrew&quot;&gt;Install Homebrew&lt;/h1&gt;
+
 &lt;blockquote&gt;
   &lt;p&gt;http://brew.sh/&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -64,88 +173,121 @@
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;install-ruby&quot;&gt;Install Ruby&lt;/h2&gt;
+&lt;h1 id=&quot;install-ruby&quot;&gt;Install Ruby&lt;/h1&gt;
+
 &lt;blockquote&gt;
   &lt;p&gt;https://www.ruby-lang.org/en/documentation/installation/#homebrew&lt;/p&gt;
-  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ brew install ruby
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
-  &lt;h2 id=&quot;sources-change&quot;&gt;Sources Change&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ brew install ruby
+
+$ brew upgrade ruby
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1 id=&quot;sources-change&quot;&gt;Sources Change&lt;/h1&gt;
+
+&lt;blockquote&gt;
   &lt;p&gt;http://ruby.taobao.org/&lt;/p&gt;
-  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem sources --remove https://rubygems.org/
-$ gem sources -a https://ruby.taobao.org/
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
 $ gem sources -l
 *** CURRENT SOURCES ***
-https://ruby.taobao.org
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
-&lt;/blockquote&gt;
+https://gems.ruby-china.org
+# 请确保只有 gems.ruby-china.org
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;请确保只有 ruby.taobao.org&lt;/code&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;install-rubygems&quot;&gt;Install RubyGems&lt;/h2&gt;
+&lt;h1 id=&quot;install-rubygems&quot;&gt;Install RubyGems&lt;/h1&gt;
+
 &lt;blockquote&gt;
   &lt;p&gt;https://rubygems.org/pages/download&lt;/p&gt;
-  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem update --system
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
-  &lt;h2 id=&quot;config-multi-git-accounts&quot;&gt;Config Multi Git Accounts&lt;/h2&gt;
 &lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem update --system
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1 id=&quot;config-multi-git-accounts&quot;&gt;Config Multi Git Accounts&lt;/h1&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;https://help.github.com/articles/generating-ssh-keys/&lt;/p&gt;
-  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cat ~/.gitconfig  
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cat ~/.gitconfig  
 $ ls -al ~/.ssh
 $ ssh-keygen -t rsa -C &quot;youremail@gmail.com&quot;
 $ pbcopy &amp;lt; ~/.ssh/id_rsa.pub
 $ vi config
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config user.name &quot;用户名&quot;
-git config user.email &quot;邮箱&quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;全局设置用户&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global user.name &quot;用户名&quot;
+git config --global user.email &quot;邮箱&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;p&gt;之后加入下面两段代码&lt;/p&gt;
+
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Host gitlab.com
 	HostName gitlab.alibaba-inc.com
 	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/id_rsa 
+	IdentityFile ~/.ssh/id_rsa
 	
 Host github.com
 	HostName github.com
 	PreferredAuthentications publickey
 	IdentityFile ~/.ssh/id_rsa_github
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;p&gt;之后执行尝试连接&lt;/p&gt;
+
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ssh -T git@github.com
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;blockquote&gt;
   &lt;p&gt;http://riny.net/2014/git-ssh-key/&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;##Bundle Install&lt;/p&gt;
+&lt;h1 id=&quot;bundle-install&quot;&gt;Bundle Install&lt;/h1&gt;
+
 &lt;blockquote&gt;
   &lt;p&gt;http://www.pchou.info/web-build/2014/07/04/build-github-blog-page-08.html&lt;/p&gt;
-  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install bundle -n /usr/local/bin
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install bundle -n /usr/local/bin
 $ gem install jekyll -n /usr/local/bin
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
   &lt;p&gt;注意：
 根目录的Gemfile文件加入 &lt;code class=&quot;highlighter-rouge&quot;&gt;source 'http://ruby.taobao.org/'&lt;/code&gt;&lt;/p&gt;
-  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle install
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
   &lt;p&gt;出现：
 An error occurred while installing nokogiri (1.6.6.2), and Bundler cannot continue.
 Make sure that &lt;code class=&quot;highlighter-rouge&quot;&gt;gem install nokogiri -v '1.6.6.2'&lt;/code&gt; succeeds before bundling.
 则需要执行&lt;/p&gt;
-  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ xcode-select --install
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
-  &lt;p&gt;===&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ xcode-select --install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;===&lt;/p&gt;
+
 &lt;p&gt;之后执行&lt;/p&gt;
+
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle exec jekyll serve
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;p&gt;或&lt;/p&gt;
+
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll serve
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;p&gt;或&lt;/p&gt;
+
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll build
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -155,7 +297,7 @@ Make sure that &lt;code class=&quot;highlighter-rouge&quot;&gt;gem install nokog
   &lt;p&gt;http://127.0.0.1:4000/&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;坑点&quot;&gt;坑点&lt;/h2&gt;
+&lt;h1 id=&quot;坑点&quot;&gt;坑点&lt;/h1&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2017-12-19T23:47:00+08:00
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -163,11 +305,11 @@ Make sure that &lt;code class=&quot;highlighter-rouge&quot;&gt;gem install nokog
 最好采用这种完全的写法&lt;/p&gt;
 </description>
         <pubDate>Tue, 19 Dec 2017 23:47:00 +0800</pubDate>
-        <link>/fd/2017/12/19/jekyll_install.html</link>
-        <guid isPermaLink="true">/fd/2017/12/19/jekyll_install.html</guid>
+        <link>/fd/2017/12/19/Jekyll%E9%85%8D%E7%BD%AE%E5%92%8C%E5%AE%89%E8%A3%85.html</link>
+        <guid isPermaLink="true">/fd/2017/12/19/Jekyll%E9%85%8D%E7%BD%AE%E5%92%8C%E5%AE%89%E8%A3%85.html</guid>
         
         
-        <category>fd</category>
+        <category>FD</category>
         
       </item>
     

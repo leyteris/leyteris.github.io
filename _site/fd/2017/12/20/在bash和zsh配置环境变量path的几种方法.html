@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     
     <meta name="description" content="独白进行中。。。请勿打扰">
-    <title>寸又的独白</title>
-    <link rel="canonical" href="/">
+    <title> 在bash和zsh配置环境变量path的几种方法 › 寸又的独白</title>
+    <link rel="canonical" href="/fd/2017/12/20/%E5%9C%A8bash%E5%92%8Czsh%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8Fpath%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95.html">
     <link href="/main.css" rel="stylesheet" type="text/css">
     <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,200italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -25,7 +25,6 @@
         </ul>
       </nav>
     </header>
-    
     
     
     <article>
@@ -132,117 +131,9 @@ $ source 相应的文件
 <p>重启 item2 即可。</p>
 
       </div>
-      <footer>
-        <p><a href="/fd/2017/12/20/%E5%9C%A8bash%E5%92%8Czsh%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8Fpath%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95.html">more &raquo;</a></p>
-      </footer>
+      
+      
     </article>
-    
-    <article>
-      <header>
-        <h2><a href="/fd/2017/12/19/Jekyll%E9%85%8D%E7%BD%AE%E5%92%8C%E5%AE%89%E8%A3%85.html">Jekyll配置和安装</a></h2>
-        <p><time datetime="2017-12-19T23:47:00+08:00">Dec 19, 2017</time> • FD</p>
-      </header>
-      <div>
-<h1 id="about-jekyll">About Jekyll</h1>
-
-<blockquote>
-  <p>https://github.com/jekyll/jekyll/</p>
-</blockquote>
-
-<blockquote>
-  <p>http://jekyllrb.com/docs/installation/</p>
-</blockquote>
-
-<h1 id="install-homebrew">Install Homebrew</h1>
-
-<blockquote>
-  <p>http://brew.sh/</p>
-</blockquote>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-</code></pre></div></div>
-
-<h1 id="install-ruby">Install Ruby</h1>
-
-<blockquote>
-  <p>https://www.ruby-lang.org/en/documentation/installation/#homebrew</p>
-</blockquote>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ brew install ruby
-
-$ brew upgrade ruby
-</code></pre></div></div>
-<h1 id="sources-change">Sources Change</h1>
-
-<blockquote>
-  <p>http://ruby.taobao.org/</p>
-</blockquote>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
-$ gem sources -l
-*** CURRENT SOURCES ***
-https://gems.ruby-china.org
-# 请确保只有 gems.ruby-china.org
-</code></pre></div></div>
-
-<p><code class="highlighter-rouge">请确保只有 ruby.taobao.org</code></p>
-
-<h1 id="install-rubygems">Install RubyGems</h1>
-
-<blockquote>
-  <p>https://rubygems.org/pages/download</p>
-</blockquote>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem update --system
-</code></pre></div></div>
-<h1 id="config-multi-git-accounts">Config Multi Git Accounts</h1>
-
-<blockquote>
-  <p>https://help.github.com/articles/generating-ssh-keys/</p>
-</blockquote>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat ~/.gitconfig  
-$ ls -al ~/.ssh
-$ ssh-keygen -t rsa -C "youremail@gmail.com"
-$ pbcopy &lt; ~/.ssh/id_rsa.pub
-$ vi config
-</code></pre></div></div>
-
-<p>全局设置用户</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.name "用户名"
-git config --global user.email "邮箱"
-</code></pre></div></div>
-
-<p>之后加入下面两段代码</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Host gitlab.com
-	HostName gitlab.alibaba-inc.com
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/id_rsa
-	
-Host github.com
-	HostName github.com
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/id_rsa_github
-</code></pre></div></div>
-
-<p>之后执行尝试连接</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ssh -T git@github.com
-</code></pre></div></div>
-
-<blockquote>
-  <p>http://riny.net/2014/git-ssh-key/</p>
-</blockquote>
-
-
-      </div>
-      <footer>
-        <p><a href="/fd/2017/12/19/Jekyll%E9%85%8D%E7%BD%AE%E5%92%8C%E5%AE%89%E8%A3%85.html">more &raquo;</a></p>
-      </footer>
-    </article>
-    
 
     <footer>
       <span><a href="">Leyteris</a></span>
