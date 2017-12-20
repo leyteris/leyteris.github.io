@@ -4,14 +4,15 @@ date:   2017-12-20T10:47:00+08:00
 categories: FD
 ---
 
-## 参考文献
+# 参考文献
 
 老习惯，列出本文**参考**或**引用**或**转载**的文档和博客，致以崇高的敬意，感兴趣的可以去看看
-1.[http://postgresapp.com/](http://postgresapp.com/)
-2.[http://postgresapp.com/documentation/cli-tools.html](http://postgresapp.com/documentation/cli-tools.html)
-3.[http://www.yiibai.com/postgresql/2013080439.html](http://www.yiibai.com/postgresql/2013080439.html)
-4.终极 Shell——ZSH： [https://zhuanlan.zhihu.com/p/19556676](https://zhuanlan.zhihu.com/p/19556676)
-5.Zsh安装配置指南 [http://www.linuxidc.com/Linux/2013-09/90377.htm](http://www.linuxidc.com/Linux/2013-09/90377.htm)
+
+* [http://postgresapp.com/](http://postgresapp.com/)
+* [http://postgresapp.com/documentation/cli-tools.html](http://postgresapp.com/documentation/cli-tools.html)
+* [http://www.yiibai.com/postgresql/2013080439.html](http://www.yiibai.com/postgresql/2013080439.html)
+* 终极 Shell——ZSH： [https://zhuanlan.zhihu.com/p/19556676](https://zhuanlan.zhihu.com/p/19556676)
+* Zsh安装配置指南 [http://www.linuxidc.com/Linux/2013-09/90377.htm](http://www.linuxidc.com/Linux/2013-09/90377.htm)
 
 ## 1.简介
 
@@ -25,12 +26,14 @@ mac 一般使用bash作为默认shell
 
 Mac系统的环境变量，加载顺序为：
 
+```
 /etc/profile
 /etc/paths
 ~/.bash_profile
 ~/.bash_login
 ~/.profile
 ~/.bashrc
+```
 
 当然/etc/profile和/etc/paths是系统级别的，系统启动就会加载，后面几个是当前用户级的环境变量。后面3个按照从前往后的顺序读取，如果~/.bash_profile文件存在，则后面的几个文件就会被忽略不读了，如果~/.bash_profile文件不存在，才会以此类推读取后面的文件。~/.bashrc没有上述规则，它是bash shell打开的时候载入的。
 
@@ -58,19 +61,25 @@ export PATH=$PATH:<PATH 1>:<PATH 2>:<PATH 3>:------:<PATH N>
 
    全局（公有）配置，bash shell执行时，不管是何种方式，都会读取此文件。
 
-4. ​
+4. ​具体步骤
 
-   1.创建一个文件：
+*  创建一个文件：
+```
    sudo touch /etc/paths.d/mysql
-   2.用 vim 打开这个文件（如果是以 open -t 的方式打开，则不允许编辑）：
+```
+* 用 vim 打开这个文件（如果是以 open -t 的方式打开，则不允许编辑)
+```
    sudo vim /etc/paths.d/mysql
-   3.编辑该文件，键入路径并保存（关闭该 Terminal 窗口并重新打开一个，就能使用 mysql 命令了）
+```
+* 编辑该文件，键入路径并保存（关闭该 Terminal 窗口并重新打开一个，就能使用 mysql 命令了)
+```
    /usr/local/mysql/bin
-   据说，这样可以自己生成新的文件，不用把变量全都放到 paths 一个文件里，方便管理。
+```
+据说，这样可以自己生成新的文件，不用把变量全都放到 paths 一个文件里，方便管理。
 
-（二）单个用户设置
+### （二）单个用户设置
 
-1）~/.bash_profile （任意一个文件中添加用户级环境变量）
+#### 1. ~/.bash_profile （任意一个文件中添加用户级环境变量）
 （注：Linux 里面是 .bashrc 而 Mac 是 .bash_profile）
 若bash shell是以login方式执行时，才会读取此文件。该文件仅仅执行一次!默认情况下,他设置一些环境变量
 设置命令别名alias ll=’ls -la’
@@ -80,17 +89,21 @@ export PATH=$PATH:<PATH 1>:<PATH 2>:<PATH 3>:------:<PATH N>
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 ```
 
-2）~/.bashrc 同上
+#### 2. ~/.bashrc 同上
 
 如果想立刻生效，则可执行下面的语句：
 $ source 相应的文件
 一般环境变量更改后，重启后生效。
 
-### 2.2 解决 Mac 下配置环境变量在 ZSH 中无效的问题
+##### 2.2 解决 Mac 下配置环境变量在 ZSH 中无效的问题
 
 在配置 gradle 的时候, 发现在 /etc/profiles 中设置了环境变量后, 还是不能在 zsh 中使用. 但在 Terminal 中可以正常使用. 后来发现是因为没有在 .zshrc 中配置.
 
-在终端中输入: cat ~/.zshrc 以此来查看 .zshrc 文件, 找到里面的 “ # User configuration “ 部分. 可以看到当前 zsh 支持的所有本地已配置环境变量.
+在终端中输入: 
+```
+cat ~/.zshrc 
+```
+以此来查看 .zshrc 文件, 找到里面的 “ # User configuration “ 部分. 可以看到当前 zsh 支持的所有本地已配置环境变量.
 
 在 export PATH=”XXXX” 里面追加一条想要配置的环境变量路径.
 

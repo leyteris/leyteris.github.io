@@ -40,20 +40,23 @@
     <description>独白进行中。。。请勿打扰</description>
     <link></link>
     <atom:link href="feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 20 Dec 2017 10:59:49 +0800</pubDate>
-    <lastBuildDate>Wed, 20 Dec 2017 10:59:49 +0800</lastBuildDate>
+    <pubDate>Wed, 20 Dec 2017 11:07:08 +0800</pubDate>
+    <lastBuildDate>Wed, 20 Dec 2017 11:07:08 +0800</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
         <title>在bash和zsh配置环境变量path的几种方法</title>
-        <description>&lt;h2 id=&quot;参考文献&quot;&gt;参考文献&lt;/h2&gt;
+        <description>&lt;h1 id=&quot;参考文献&quot;&gt;参考文献&lt;/h1&gt;
 
-&lt;p&gt;老习惯，列出本文&lt;strong&gt;参考&lt;/strong&gt;或&lt;strong&gt;引用&lt;/strong&gt;或&lt;strong&gt;转载&lt;/strong&gt;的文档和博客，致以崇高的敬意，感兴趣的可以去看看
-1.&lt;a href=&quot;http://postgresapp.com/&quot;&gt;http://postgresapp.com/&lt;/a&gt;
-2.&lt;a href=&quot;http://postgresapp.com/documentation/cli-tools.html&quot;&gt;http://postgresapp.com/documentation/cli-tools.html&lt;/a&gt;
-3.&lt;a href=&quot;http://www.yiibai.com/postgresql/2013080439.html&quot;&gt;http://www.yiibai.com/postgresql/2013080439.html&lt;/a&gt;
-4.终极 Shell——ZSH： &lt;a href=&quot;https://zhuanlan.zhihu.com/p/19556676&quot;&gt;https://zhuanlan.zhihu.com/p/19556676&lt;/a&gt;
-5.Zsh安装配置指南 &lt;a href=&quot;http://www.linuxidc.com/Linux/2013-09/90377.htm&quot;&gt;http://www.linuxidc.com/Linux/2013-09/90377.htm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;老习惯，列出本文&lt;strong&gt;参考&lt;/strong&gt;或&lt;strong&gt;引用&lt;/strong&gt;或&lt;strong&gt;转载&lt;/strong&gt;的文档和博客，致以崇高的敬意，感兴趣的可以去看看&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://postgresapp.com/&quot;&gt;http://postgresapp.com/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://postgresapp.com/documentation/cli-tools.html&quot;&gt;http://postgresapp.com/documentation/cli-tools.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.yiibai.com/postgresql/2013080439.html&quot;&gt;http://www.yiibai.com/postgresql/2013080439.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;终极 Shell——ZSH： &lt;a href=&quot;https://zhuanlan.zhihu.com/p/19556676&quot;&gt;https://zhuanlan.zhihu.com/p/19556676&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Zsh安装配置指南 &lt;a href=&quot;http://www.linuxidc.com/Linux/2013-09/90377.htm&quot;&gt;http://www.linuxidc.com/Linux/2013-09/90377.htm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;1简介&quot;&gt;1.简介&lt;/h2&gt;
 
@@ -67,12 +70,13 @@
 
 &lt;p&gt;Mac系统的环境变量，加载顺序为：&lt;/p&gt;
 
-&lt;p&gt;/etc/profile
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/etc/profile
 /etc/paths
 ~/.bash_profile
 ~/.bash_login
 ~/.profile
-~/.bashrc&lt;/p&gt;
+~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;当然/etc/profile和/etc/paths是系统级别的，系统启动就会加载，后面几个是当前用户级的环境变量。后面3个按照从前往后的顺序读取，如果~/.bash_profile文件存在，则后面的几个文件就会被忽略不读了，如果~/.bash_profile文件不存在，才会以此类推读取后面的文件。~/.bashrc没有上述规则，它是bash shell打开的时候载入的。&lt;/p&gt;
 
@@ -104,22 +108,30 @@ Hint：输入环境变量时，不用一个一个地输入，只要拖动文件�
     &lt;p&gt;全局（公有）配置，bash shell执行时，不管是何种方式，都会读取此文件。&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;​&lt;/p&gt;
-
-    &lt;p&gt;1.创建一个文件：
-sudo touch /etc/paths.d/mysql
-2.用 vim 打开这个文件（如果是以 open -t 的方式打开，则不允许编辑）：
-sudo vim /etc/paths.d/mysql
-3.编辑该文件，键入路径并保存（关闭该 Terminal 窗口并重新打开一个，就能使用 mysql 命令了）
-/usr/local/mysql/bin
-据说，这样可以自己生成新的文件，不用把变量全都放到 paths 一个文件里，方便管理。&lt;/p&gt;
+    &lt;p&gt;​具体步骤&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;（二）单个用户设置&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;创建一个文件：
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo touch /etc/paths.d/mysql
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;用 vim 打开这个文件（如果是以 open -t 的方式打开，则不允许编辑)
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo vim /etc/paths.d/mysql
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;编辑该文件，键入路径并保存（关闭该 Terminal 窗口并重新打开一个，就能使用 mysql 命令了)
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; /usr/local/mysql/bin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;据说，这样可以自己生成新的文件，不用把变量全都放到 paths 一个文件里，方便管理。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;1）~/.bash_profile （任意一个文件中添加用户级环境变量）
-（注：Linux 里面是 .bashrc 而 Mac 是 .bash_profile）
+&lt;h3 id=&quot;二单个用户设置&quot;&gt;（二）单个用户设置&lt;/h3&gt;
+
+&lt;h4 id=&quot;1-bash_profile-任意一个文件中添加用户级环境变量&quot;&gt;1. ~/.bash_profile （任意一个文件中添加用户级环境变量）&lt;/h4&gt;
+&lt;p&gt;（注：Linux 里面是 .bashrc 而 Mac 是 .bash_profile）
 若bash shell是以login方式执行时，才会读取此文件。该文件仅仅执行一次!默认情况下,他设置一些环境变量
 设置命令别名alias ll=’ls -la’
 设置环境变量：&lt;/p&gt;
@@ -127,17 +139,20 @@ sudo vim /etc/paths.d/mysql
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;2）~/.bashrc 同上&lt;/p&gt;
+&lt;h4 id=&quot;2-bashrc-同上&quot;&gt;2. ~/.bashrc 同上&lt;/h4&gt;
 
 &lt;p&gt;如果想立刻生效，则可执行下面的语句：
 $ source 相应的文件
 一般环境变量更改后，重启后生效。&lt;/p&gt;
 
-&lt;h3 id=&quot;22-解决-mac-下配置环境变量在-zsh-中无效的问题&quot;&gt;2.2 解决 Mac 下配置环境变量在 ZSH 中无效的问题&lt;/h3&gt;
+&lt;h5 id=&quot;22-解决-mac-下配置环境变量在-zsh-中无效的问题&quot;&gt;2.2 解决 Mac 下配置环境变量在 ZSH 中无效的问题&lt;/h5&gt;
 
 &lt;p&gt;在配置 gradle 的时候, 发现在 /etc/profiles 中设置了环境变量后, 还是不能在 zsh 中使用. 但在 Terminal 中可以正常使用. 后来发现是因为没有在 .zshrc 中配置.&lt;/p&gt;
 
-&lt;p&gt;在终端中输入: cat ~/.zshrc 以此来查看 .zshrc 文件, 找到里面的 “ # User configuration “ 部分. 可以看到当前 zsh 支持的所有本地已配置环境变量.&lt;/p&gt;
+&lt;p&gt;在终端中输入:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cat ~/.zshrc 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;以此来查看 .zshrc 文件, 找到里面的 “ # User configuration “ 部分. 可以看到当前 zsh 支持的所有本地已配置环境变量.&lt;/p&gt;
 
 &lt;p&gt;在 export PATH=”XXXX” 里面追加一条想要配置的环境变量路径.&lt;/p&gt;
 
