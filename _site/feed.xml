@@ -40,9 +40,92 @@
     <description>独白进行中。。。请勿打扰</description>
     <link></link>
     <atom:link href="feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 20 Dec 2017 11:07:08 +0800</pubDate>
-    <lastBuildDate>Wed, 20 Dec 2017 11:07:08 +0800</lastBuildDate>
+    <pubDate>Fri, 05 Jan 2018 20:51:57 +0800</pubDate>
+    <lastBuildDate>Fri, 05 Jan 2018 20:51:57 +0800</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>深度学习相关系统学习资料</title>
+        <description>&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
+
+&lt;p&gt;深度学习火起来之后，网上关于深度学习的资料很多。但是其质量参差不齐。我 从 2013 年开始就关注深度学习，见证了它从一个小圈子的领先技术到一个大众所追 捧的热门技术的过程，也看了很多资料。我认为一个高质量的学习资料可以帮助你真 正的理解深度学习的本质，并且更好地掌握这项技术，用于实践。&lt;/p&gt;
+
+&lt;p&gt;首先是视频课程。&lt;/p&gt;
+
+&lt;h1 id=&quot;视频课程&quot;&gt;视频课程&lt;/h1&gt;
+
+&lt;h2 id=&quot;yaser-abu-mostafa&quot;&gt;Yaser Abu-Mostafa&lt;/h2&gt;
+
+&lt;p&gt;加州理工的 Yaser Abu-Mostafa 教授出品的机器学习网络课程，非常系统地讲 解了机器学习背后的原理，以及主要的技术。讲解非常深入浅出，让你不光理解机器 学习有哪些技术，还能理解它们背后的思想，为什么要提出这项技术，机器学习的一 些通用性问题的解决方法(比如用正则化方法解决过拟合)。强烈推荐。&lt;/p&gt;
+
+&lt;p&gt;课程名称: Machine Learning Course - CS 156
+视频地址: &lt;a href=&quot;https://www.youtube.com/watch?v=mbyG85GZ0PI&amp;amp;list=PLD63A-284B7615313A&quot;&gt;https://www.youtube.com/watch?v=mbyG85GZ0PI&amp;amp;list=PLD63A-284B7615313A&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;geoffrey-hinton&quot;&gt;Geoffrey Hinton&lt;/h2&gt;
+
+&lt;p&gt;深度学习最重要的研究者。也是他和另外几个人(Yann LeCun，Yoshua Bengio 等)在神经网络被人工智能业界打入冷宫，进入低谷期的时候仍然不放弃研 究，最终取得突破，才有了现在的深度学习热潮。
+他在 Coursera 上有一门深度学习的课程，其权威性自不待言，但是课程制作的 质量以及易于理解的程度，实际上比不上前面 Yaser Mostafa 的。当然，因为其实 力，课程的干货还是非常多的。&lt;/p&gt;
+
+&lt;p&gt;课程名称: Neural Networks for Machine Learning 
+课程地址: &lt;a href=&quot;https://www.coursera.org/learn/neural-networks&quot;&gt;https://www.coursera.org/learn/neural-networks&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;udacity&quot;&gt;UdaCity&lt;/h2&gt;
+
+&lt;p&gt;Google 工程师出品的一个偏重实践的深度学习课程。讲解非常简明扼要，并且 注重和实践相结合。推荐。
+课程名称: 深度学习 
+课程地址: &lt;a href=&quot;https://cn.udacity.com/course/deep-learning--ud730&quot;&gt;https://cn.udacity.com/course/deep-learning–ud730&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;小象学院&quot;&gt;小象学院&lt;/h2&gt;
+
+&lt;p&gt;国内小象学院出品的一个深度学习课程，理论与实践并重。由纽约城市大学的博 士李伟主讲，优点是包含了很多业内最新的主流技术的讲解。值得一看。&lt;/p&gt;
+
+&lt;p&gt;课程名称:深度学习(第四期) 
+课程地址:&lt;a href=&quot;http://www.chinahadoop.cn/classroom/45/courses&quot;&gt;http://www.chinahadoop.cn/classroom/45/courses&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;推荐阅读书目&quot;&gt;推荐阅读书目&lt;/h1&gt;
+
+&lt;p&gt;##《Deep Learning the Book》&lt;/p&gt;
+
+&lt;p&gt;—— 这本书是前面提到的大牛 Yoshua Begio 的 博士生 Goodfellow 写的。Goodfellow 是生成式对抗网络的提出者，生成式对抗网 络被 Yann LeCun 认为是近年最激动人心的深度学习技术想法。这本书比较系统， 专业，偏重理论，兼顾实践，是系统学习深度学习不可多得的好教材。&lt;/p&gt;
+
+&lt;p&gt;英文版:&lt;a href=&quot;http://deeplearningthebook.com&quot;&gt;http://deeplearningthebook.com&lt;/a&gt;
+目前 Github 上已经有人翻译出了中文版: &lt;a href=&quot;https://github.com/exacity/deeplearningbook-chinese&quot;&gt;https://github.com/exacity/deeplearningbook-chinese&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;推荐学习路径&quot;&gt;推荐学习路径&lt;/h1&gt;
+
+&lt;p&gt;不同的人有不同的需求，有些人希望掌握好理论基础，然后进行实践，有些人希望能够快速上手，马上做点东西，有些人希望理论与实践兼顾。下面推荐几条学习路径，照顾到不同的需求。大家可以根据自己的特点进行选择。&lt;/p&gt;
+
+&lt;h2 id=&quot;hard-way&quot;&gt;Hard way&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Yaser -&amp;gt; Geoffrey Hinton -&amp;gt; UdaCity -&amp;gt; Good Fellow 
+特点:理论扎实，步步为营。最完整的学习路径，也是最“难”的。
+推荐指数:4 星
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;good-way&quot;&gt;Good way&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Yaser -&amp;gt; UdaCity -&amp;gt; 小象学院 -&amp;gt; Good Fellow
+特点:理论扎实，紧跟潮流，兼顾实战，最后系统梳理。比较平衡的学习路径。
+推荐指数:5星
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;fast-way&quot;&gt;“Fast” way&lt;/h2&gt;
+
+&lt;p&gt;UdaCity -&amp;gt; Good Fellow 特点:快速上手，然后完善理论。 推荐指数:4星&lt;/p&gt;
+
+&lt;h2 id=&quot;码农-way&quot;&gt;“码农” way&lt;/h2&gt;
+
+&lt;p&gt;UdaCity
+特点:快速上手，注重实践。 推荐指数:3星&lt;/p&gt;
+</description>
+        <pubDate>Fri, 05 Jan 2018 17:52:00 +0800</pubDate>
+        <link>/deeplearning/2018/01/05/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99.html</link>
+        <guid isPermaLink="true">/deeplearning/2018/01/05/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99.html</guid>
+        
+        
+        <category>DeepLearning</category>
+        
+      </item>
     
       <item>
         <title>在bash和zsh配置环境变量path的几种方法</title>
@@ -338,7 +421,7 @@ Make sure that &lt;code class=&quot;highlighter-rouge&quot;&gt;gem install nokog
     <footer>
       <span><a href="">Leyteris</a></span>
       <span><a href="https://github.com/leyteris/"><i class="fa fa-github-square"></i></a></span>
-      <span>&copy; 2017</span>
+      <span>&copy; 2018</span>
     </footer>
   </body>
 </html>
