@@ -1,0 +1,405 @@
+{
+  "random" : false,
+  "authPass" : null,
+  "useOnlinePac" : false,
+  "TTL" : 0,
+  "global" : false,
+  "reconnectTimes" : 3,
+  "index" : 0,
+  "proxyType" : 0,
+  "proxyHost" : null,
+  "authUser" : null,
+  "proxyAuthPass" : null,
+  "isDefault" : false,
+  "pacUrl" : null,
+  "configs" : [
+    {
+      "enable" : true,
+      "password" : "f78957",
+      "method" : "aes-128-cfb",
+      "remarks" : "",
+      "server" : "j0.0bad.com",
+      "kcptun" : {
+        "nocomp" : false,
+        "key" : "it's a secrect",
+        "crypt" : "aes",
+        "datashard" : 10,
+        "mtu" : 1350,
+        "mode" : "fast",
+        "parityshard" : 3,
+        "arguments" : ""
+      },
+      "enabled_kcptun" : false,
+      "server_port" : 35496,
+      "remarks_base64" : ""
+    },
+    {
+      "enable" : true,
+      "password" : "f78957",
+      "method" : "aes-128-cfb",
+      "remarks" : "",
+      "server" : "j1.0bad.com",
+      "kcptun" : {
+        "nocomp" : false,
+        "key" : "it's a secrect",
+        "crypt" : "aes",
+        "datashard" : 10,
+        "mtu" : 1350,
+        "mode" : "fast",
+        "parityshard" : 3,
+        "arguments" : ""
+      },
+      "enabled_kcptun" : false,
+      "server_port" : 35496,
+      "remarks_base64" : ""
+    },
+    {
+      "enable" : true,
+      "password" : "f78957",
+      "method" : "aes-128-cfb",
+      "remarks" : "",
+      "server" : "j2.0bad.com",
+      "kcptun" : {
+        "nocomp" : false,
+        "key" : "it's a secrect",
+        "crypt" : "aes",
+        "datashard" : 10,
+        "mtu" : 1350,
+        "mode" : "fast",
+        "parityshard" : 3,
+        "arguments" : ""
+      },
+      "enabled_kcptun" : false,
+      "server_port" : 35496,
+      "remarks_base64" : ""
+    },
+    {
+      "enable" : true,
+      "password" : "f78957",
+      "method" : "aes-128-cfb",
+      "remarks" : "",
+      "server" : "j3.0bad.com",
+      "kcptun" : {
+        "nocomp" : false,
+        "key" : "it's a secrect",
+        "crypt" : "aes",
+        "datashard" : 10,
+        "mtu" : 1350,
+        "mode" : "fast",
+        "parityshard" : 3,
+        "arguments" : ""
+      },
+      "enabled_kcptun" : false,
+      "server_port" : 35496,
+      "remarks_base64" : ""
+    },
+    {
+      "enable" : true,
+      "password" : "f78957",
+      "method" : "aes-128-cfb",
+      "remarks" : "",
+      "server" : "j4.0bad.com",
+      "kcptun" : {
+        "nocomp" : false,
+        "key" : "it's a secrect",
+        "crypt" : "aes",
+        "datashard" : 10,
+        "mtu" : 1350,
+        "mode" : "fast",
+        "parityshard" : 3,
+        "arguments" : ""
+      },
+      "enabled_kcptun" : false,
+      "server_port" : 35496,
+      "remarks_base64" : ""
+    },
+    {
+      "enable" : true,
+      "password" : "f78957",
+      "method" : "aes-128-cfb",
+      "remarks" : "",
+      "server" : "j5.0bad.com",
+      "kcptun" : {
+        "nocomp" : false,
+        "key" : "it's a secrect",
+        "crypt" : "aes",
+        "datashard" : 10,
+        "mtu" : 1350,
+        "mode" : "fast",
+        "parityshard" : 3,
+        "arguments" : ""
+      },
+      "enabled_kcptun" : false,
+      "server_port" : 35496,
+      "remarks_base64" : ""
+    },
+    {
+      "enable" : true,
+      "password" : "f78957",
+      "method" : "aes-128-cfb",
+      "remarks" : "",
+      "server" : "hk.0bad.com",
+      "kcptun" : {
+        "nocomp" : false,
+        "key" : "it's a secrect",
+        "crypt" : "aes",
+        "datashard" : 10,
+        "mtu" : 1350,
+        "mode" : "fast",
+        "parityshard" : 3,
+        "arguments" : ""
+      },
+      "enabled_kcptun" : false,
+      "server_port" : 35496,
+      "remarks_base64" : ""
+    },
+    {
+      "enable" : true,
+      "password" : "f78957",
+      "method" : "aes-128-cfb",
+      "remarks" : "",
+      "server" : "sg01.0bad.com",
+      "kcptun" : {
+        "nocomp" : false,
+        "key" : "it's a secrect",
+        "crypt" : "aes",
+        "datashard" : 10,
+        "mtu" : 1350,
+        "mode" : "fast",
+        "parityshard" : 3,
+        "arguments" : ""
+      },
+      "enabled_kcptun" : false,
+      "server_port" : 35496,
+      "remarks_base64" : ""
+    },
+    {
+      "enable" : true,
+      "password" : "f78957",
+      "method" : "aes-128-cfb",
+      "remarks" : "",
+      "server" : "us0.0bad.com",
+      "kcptun" : {
+        "nocomp" : false,
+        "key" : "it's a secrect",
+        "crypt" : "aes",
+        "datashard" : 10,
+        "mtu" : 1350,
+        "mode" : "fast",
+        "parityshard" : 3,
+        "arguments" : ""
+      },
+      "enabled_kcptun" : false,
+      "server_port" : 35496,
+      "remarks_base64" : ""
+    },
+    {
+      "enable" : true,
+      "password" : "f78957",
+      "method" : "aes-128-cfb",
+      "remarks" : "",
+      "server" : "us1.0bad.com",
+      "kcptun" : {
+        "nocomp" : false,
+        "key" : "it's a secrect",
+        "crypt" : "aes",
+        "datashard" : 10,
+        "mtu" : 1350,
+        "mode" : "fast",
+        "parityshard" : 3,
+        "arguments" : ""
+      },
+      "enabled_kcptun" : false,
+      "server_port" : 35496,
+      "remarks_base64" : ""
+    },
+    {
+      "enable" : true,
+      "password" : "f78957",
+      "method" : "aes-128-cfb",
+      "remarks" : "",
+      "server" : "us2.0bad.com",
+      "kcptun" : {
+        "nocomp" : false,
+        "key" : "it's a secrect",
+        "crypt" : "aes",
+        "datashard" : 10,
+        "mtu" : 1350,
+        "mode" : "fast",
+        "parityshard" : 3,
+        "arguments" : ""
+      },
+      "enabled_kcptun" : false,
+      "server_port" : 35496,
+      "remarks_base64" : ""
+    },
+    {
+      "enable" : true,
+      "password" : "f78957",
+      "method" : "aes-128-cfb",
+      "remarks" : "",
+      "server" : "us3.0bad.com",
+      "kcptun" : {
+        "nocomp" : false,
+        "key" : "it's a secrect",
+        "crypt" : "aes",
+        "datashard" : 10,
+        "mtu" : 1350,
+        "mode" : "fast",
+        "parityshard" : 3,
+        "arguments" : ""
+      },
+      "enabled_kcptun" : false,
+      "server_port" : 35496,
+      "remarks_base64" : ""
+    },
+    {
+      "enable" : true,
+      "password" : "f78957",
+      "method" : "aes-128-cfb",
+      "remarks" : "",
+      "server" : "us4.0bad.com",
+      "kcptun" : {
+        "nocomp" : false,
+        "key" : "it's a secrect",
+        "crypt" : "aes",
+        "datashard" : 10,
+        "mtu" : 1350,
+        "mode" : "fast",
+        "parityshard" : 3,
+        "arguments" : ""
+      },
+      "enabled_kcptun" : false,
+      "server_port" : 35496,
+      "remarks_base64" : ""
+    },
+    {
+      "enable" : true,
+      "password" : "f78957",
+      "method" : "aes-128-cfb",
+      "remarks" : "",
+      "server" : "us5.0bad.com",
+      "kcptun" : {
+        "nocomp" : false,
+        "key" : "it's a secrect",
+        "crypt" : "aes",
+        "datashard" : 10,
+        "mtu" : 1350,
+        "mode" : "fast",
+        "parityshard" : 3,
+        "arguments" : ""
+      },
+      "enabled_kcptun" : false,
+      "server_port" : 35496,
+      "remarks_base64" : ""
+    },
+    {
+      "enable" : true,
+      "password" : "f78957",
+      "method" : "aes-128-cfb",
+      "remarks" : "",
+      "server" : "us6.0bad.com",
+      "kcptun" : {
+        "nocomp" : false,
+        "key" : "it's a secrect",
+        "crypt" : "aes",
+        "datashard" : 10,
+        "mtu" : 1350,
+        "mode" : "fast",
+        "parityshard" : 3,
+        "arguments" : ""
+      },
+      "enabled_kcptun" : false,
+      "server_port" : 35496,
+      "remarks_base64" : ""
+    },
+    {
+      "enable" : true,
+      "password" : "f78957",
+      "method" : "aes-128-cfb",
+      "remarks" : "",
+      "server" : "us7.0bad.com",
+      "kcptun" : {
+        "nocomp" : false,
+        "key" : "it's a secrect",
+        "crypt" : "aes",
+        "datashard" : 10,
+        "mtu" : 1350,
+        "mode" : "fast",
+        "parityshard" : 3,
+        "arguments" : ""
+      },
+      "enabled_kcptun" : false,
+      "server_port" : 35496,
+      "remarks_base64" : ""
+    },
+    {
+      "enable" : true,
+      "password" : "f78957",
+      "method" : "aes-128-cfb",
+      "remarks" : "",
+      "server" : "us8.0bad.com",
+      "kcptun" : {
+        "nocomp" : false,
+        "key" : "it's a secrect",
+        "crypt" : "aes",
+        "datashard" : 10,
+        "mtu" : 1350,
+        "mode" : "fast",
+        "parityshard" : 3,
+        "arguments" : ""
+      },
+      "enabled_kcptun" : false,
+      "server_port" : 35496,
+      "remarks_base64" : ""
+    },
+    {
+      "enable" : true,
+      "password" : "f78957",
+      "method" : "aes-128-cfb",
+      "remarks" : "",
+      "server" : "us9.0bad.com",
+      "kcptun" : {
+        "nocomp" : false,
+        "key" : "it's a secrect",
+        "crypt" : "aes",
+        "datashard" : 10,
+        "mtu" : 1350,
+        "mode" : "fast",
+        "parityshard" : 3,
+        "arguments" : ""
+      },
+      "enabled_kcptun" : false,
+      "server_port" : 35496,
+      "remarks_base64" : ""
+    },
+    {
+      "enable" : true,
+      "password" : "f78957",
+      "method" : "aes-128-cfb",
+      "remarks" : "",
+      "server" : "uk.0bad.com",
+      "kcptun" : {
+        "nocomp" : false,
+        "key" : "it's a secrect",
+        "crypt" : "aes",
+        "datashard" : 10,
+        "mtu" : 1350,
+        "mode" : "fast",
+        "parityshard" : 3,
+        "arguments" : ""
+      },
+      "enabled_kcptun" : false,
+      "server_port" : 35496,
+      "remarks_base64" : ""
+    }
+  ],
+  "proxyPort" : 0,
+  "randomAlgorithm" : 0,
+  "proxyEnable" : false,
+  "enabled" : true,
+  "autoban" : false,
+  "proxyAuthUser" : null,
+  "shareOverLan" : false,
+  "localPort" : 1080
+}
